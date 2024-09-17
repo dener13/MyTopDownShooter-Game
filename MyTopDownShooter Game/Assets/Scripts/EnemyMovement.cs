@@ -13,12 +13,14 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerAwarenessController playerAwarenessController;
     private Vector2 targetDirection;
+    private float changeDirectionCooldown;
 
     
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerAwarenessController = GetComponent<PlayerAwarenessController>();
+        targetDirection = transform.up;
     }
 
 
@@ -31,22 +33,36 @@ public class EnemyMovement : MonoBehaviour
 
     private void UpdateTargetDirection()
     {
+        HandleRandomDirectionChange();
+        HandlePlayerTargeting();
+        
+    }
+
+    private void HandleRandomDirectionChange()
+    {
+        changeDirectionCooldown -= Time.deltaTime;
+
+        if(changeDirectionCooldown <= 0)
+        {
+            float angleChange = Random.Range(-90f, 90f);
+            Quaternion rotation = Quaternion.AngleAxis(angleChange, transform.forward);
+            targetDirection = rotation * targetDirection;
+
+            changeDirectionCooldown = Random.Range(1f, 5f);
+        }
+    }
+
+    private void HandlePlayerTargeting()
+    {
         if (playerAwarenessController.awareOfPlayer)
         {
             targetDirection = playerAwarenessController.directionToPlayer;
-        }
-        else
-        {
-            targetDirection = Vector2.zero;
         }
     }
 
     private void RotateTowardsTarget() 
     { 
-        if(targetDirection == Vector2.zero)
-        {
-            return;
-        }
+       
 
         Quaternion targetRotation = Quaternion.LookRotation(transform.forward, targetDirection);
         Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -56,14 +72,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void SetVelocity()
     {
-        if(targetDirection == Vector2.zero)
-        {
-            rb.velocity = Vector2.zero;
-        }
-
-        else
-        {
-            rb.velocity = transform.up * speed;
-        }
+        rb.velocity = transform.up * speed;
     }
 }

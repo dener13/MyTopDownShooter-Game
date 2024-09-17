@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 50903765579286338}
   - component: {fileID: 50903765579286341}
   - component: {fileID: 50903765579286340}
+  - component: {fileID: 5159645023637332307}
   m_Layer: 0
-  m_Name: ArmyZombie
-  m_TagString: Untagged
+  m_Name: ArmyZombieLvl-5
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,12 +50,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &50903765579286341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a734d84e3fb464b8c9f00a1e8112e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.9
   rotationSpeed: 100
 --- !u!114 &50903765579286340
 MonoBehaviour:
@@ -81,7 +82,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a313e621b9884a7418b914fdfd7e944c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAwarenessDistance: 10
+  playerAwarenessDistance: 5
+--- !u!58 &5159645023637332307
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50903765579286393}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
 --- !u!1 &50903766701391577
 GameObject:
   m_ObjectHideFlags: 0
