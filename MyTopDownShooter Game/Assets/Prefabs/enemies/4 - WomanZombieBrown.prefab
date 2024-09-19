@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6313314995684802199}
   - component: {fileID: 6313314995684802192}
   - component: {fileID: 4392930379433957933}
+  - component: {fileID: -2331391142536346907}
   m_Layer: 0
-  m_Name: WomanZombie2lVL-4
+  m_Name: 4 - WomanZombieBrown
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +100,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.29
+--- !u!114 &-2331391142536346907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313314995684802193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3063b92dc4bc44bae6e85e3d3ca57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 15
 --- !u!1 &6313314996828545862
 GameObject:
   m_ObjectHideFlags: 0
