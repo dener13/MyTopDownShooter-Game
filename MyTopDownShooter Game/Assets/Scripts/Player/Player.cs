@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float speed;
 
+
+    private Animator animator;
+
     [SerializeField]
     private float rotationSpeed;
 
@@ -19,12 +22,20 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
         SetPlayerVelocity();
         RotateInDirectionOfInput();
+        SetAnimation();
+    }
+
+    private void SetAnimation()
+    {
+        bool isMoving = movementInput != Vector2.zero;
+        animator.SetBool("isMoving", isMoving);
     }
 
     private void SetPlayerVelocity() 

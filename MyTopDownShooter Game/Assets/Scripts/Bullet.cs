@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Enemy":
-                Destroy(collision.gameObject); //PROVISORIO, FAZER UM SISTEMA DE VIDA
+                Destroy(collision.gameObject);
                 Destroy(this.gameObject);
                 break;
         }
