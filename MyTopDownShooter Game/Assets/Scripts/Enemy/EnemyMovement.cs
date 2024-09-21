@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public static EnemyMovement instance;
+
     [SerializeField]
     private float speed;
+
+    
+    public float life;
+    public float maxLife;
 
     [SerializeField]
     private float rotationSpeed;
@@ -15,12 +21,16 @@ public class EnemyMovement : MonoBehaviour
     private Vector2 targetDirection;
     private float changeDirectionCooldown;
 
+    public List<DropItem> possibleDrops; // lista de itens que podem ser dropados
+
     
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerAwarenessController = GetComponent<PlayerAwarenessController>();
         targetDirection = transform.up;
+
+        life = maxLife;
     }
 
 
@@ -29,7 +39,38 @@ public class EnemyMovement : MonoBehaviour
         UpdateTargetDirection();
         RotateTowardsTarget();
         SetVelocity();
+        EnemyDeath();
     }
+
+
+    // Função para determinar quais itens serão dropados
+    public void DropLoot()
+    {
+        foreach (DropItem item in possibleDrops)
+        {
+            float randomValue = Random.Range(0f, 100f);  // Gera um número aleatório entre 0 e 100
+            if (randomValue <= item.dropChance)
+            {
+                Instantiate(item.itemPrefab, transform.position, Quaternion.identity);  // Dropa o item
+            }
+        }
+    }
+
+    private void EnemyDeath()
+    {
+        if(life <= 0)
+        {
+            OnDeath();
+        }
+    }
+
+    // Chame essa função quando o inimigo morrer
+    public void OnDeath()
+    {
+        DropLoot();
+        Destroy(this.gameObject);  // Destroi o inimigo
+    }
+
 
     private void UpdateTargetDirection()
     {
@@ -74,4 +115,16 @@ public class EnemyMovement : MonoBehaviour
     {
         rb.velocity = transform.up * speed;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "Bullet":
+                life -= 1;
+                break;
+        }
+    }
+
+
 }

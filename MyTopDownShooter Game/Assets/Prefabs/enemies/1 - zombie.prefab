@@ -70,7 +70,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  life: 0
+  maxLife: 3
   rotationSpeed: 100
+  possibleDrops:
+  - {fileID: -8656536038138906302, guid: a2ba5f956754b384faf8fa3cce14d29d, type: 3}
+  - {fileID: -2681497931575567278, guid: 20247cf36f8918643b0b6cdaa9d58f39, type: 3}
 --- !u!114 &714349372008643272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3063b92dc4bc44bae6e85e3d3ca57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 50
+  damageAmount: 10
 --- !u!1 &714349373046515486
 GameObject:
   m_ObjectHideFlags: 0
