@@ -20,7 +20,6 @@ public class Bullet : MonoBehaviour
                 GameObject instance = Instantiate(hitFx, other.transform.position, Quaternion.identity);
                 Destroy(instance, 0.5f);
                 Destroy(this.gameObject);
-                ScoreManager.instance.AddPoints(ScoreManager.instance.pointsForKill);
                 break;
         }
     }

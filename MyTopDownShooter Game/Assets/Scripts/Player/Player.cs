@@ -5,9 +5,13 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+
+    private HealthController healthController;
+
     [SerializeField]
     private float speed;
 
+    public int bulletDamage;
 
     private Animator animator;
 
@@ -21,6 +25,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        healthController = FindObjectOfType<HealthController>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -62,5 +67,31 @@ public class Player : MonoBehaviour
     private void OnMove(InputValue inputValue)
     {
         movementInput =  inputValue.Get<Vector2>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "life":
+                healthController.AddHealth(10);
+                Destroy(other.gameObject);
+                break;
+
+            case "money":
+                MoneyManager.instance.AddMoney(10);
+                Destroy(other.gameObject);
+                break;
+
+            case "superpower":
+                Debug.Log("player pegou superpower");
+                Destroy(other.gameObject);
+                break;
+
+            case "colete":
+                Debug.Log("player pegou o colete");
+                Destroy(other.gameObject);
+                break;
+        }
     }
 }

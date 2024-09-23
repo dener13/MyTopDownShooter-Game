@@ -6,6 +6,8 @@ public class EnemyMovement : MonoBehaviour
 {
     public static EnemyMovement instance;
 
+    private Player player;
+
     [SerializeField]
     private float speed;
 
@@ -26,6 +28,8 @@ public class EnemyMovement : MonoBehaviour
     
     private void Awake()
     {
+        player = FindObjectOfType<Player>();
+
         rb = GetComponent<Rigidbody2D>();
         playerAwarenessController = GetComponent<PlayerAwarenessController>();
         targetDirection = transform.up;
@@ -68,6 +72,7 @@ public class EnemyMovement : MonoBehaviour
     public void OnDeath()
     {
         DropLoot();
+        ScoreManager.instance.AddPoints(ScoreManager.instance.pointsForKill);
         Destroy(this.gameObject);  // Destroi o inimigo
     }
 
@@ -121,7 +126,7 @@ public class EnemyMovement : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Bullet":
-                life -= 1;
+                life -= player.bulletDamage;
                 break;
         }
     }

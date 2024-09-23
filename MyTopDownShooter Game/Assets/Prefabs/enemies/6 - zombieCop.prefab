@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   life: 0
-  maxLife: 25
+  maxLife: 30
   rotationSpeed: 100
   possibleDrops:
   - {fileID: -2681497931575567278, guid: 20247cf36f8918643b0b6cdaa9d58f39, type: 3}

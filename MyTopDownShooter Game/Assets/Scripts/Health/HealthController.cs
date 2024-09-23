@@ -5,8 +5,10 @@ using UnityEngine.Events;
 
 public class HealthController : MonoBehaviour
 {
+    public static HealthController instance;
+
     [SerializeField]
-    private float currentHealth;
+    public float currentHealth;
 
     [SerializeField]
     private float maximumHealth;
