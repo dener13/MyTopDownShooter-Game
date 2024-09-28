@@ -35,7 +35,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Kills: " + score;
+            scoreText.text = "Score: " + score;
         }
     }
 

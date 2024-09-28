@@ -7,11 +7,12 @@ public class EnemyMovement : MonoBehaviour
     public static EnemyMovement instance;
 
     private Player player;
+    private Fireball fireball;
 
     [SerializeField]
     private float speed;
 
-    
+
     public float life;
     public float maxLife;
 
@@ -25,10 +26,11 @@ public class EnemyMovement : MonoBehaviour
 
     public List<DropItem> possibleDrops; // lista de itens que podem ser dropados
 
-    
+
     private void Awake()
     {
         player = FindObjectOfType<Player>();
+        fireball = FindObjectOfType<Fireball>();
 
         rb = GetComponent<Rigidbody2D>();
         playerAwarenessController = GetComponent<PlayerAwarenessController>();
@@ -62,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void EnemyDeath()
     {
-        if(life <= 0)
+        if (life <= 0)
         {
             OnDeath();
         }
@@ -82,13 +84,14 @@ public class EnemyMovement : MonoBehaviour
         HandleRandomDirectionChange();
         HandlePlayerTargeting();
         
+
     }
 
     private void HandleRandomDirectionChange()
     {
         changeDirectionCooldown -= Time.deltaTime;
 
-        if(changeDirectionCooldown <= 0)
+        if (changeDirectionCooldown <= 0)
         {
             float angleChange = Random.Range(-90f, 90f);
             Quaternion rotation = Quaternion.AngleAxis(angleChange, transform.forward);
@@ -106,9 +109,9 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void RotateTowardsTarget() 
-    { 
-       
+    private void RotateTowardsTarget()
+    {
+
 
         Quaternion targetRotation = Quaternion.LookRotation(transform.forward, targetDirection);
         Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -128,8 +131,26 @@ public class EnemyMovement : MonoBehaviour
             case "Bullet":
                 life -= player.bulletDamage;
                 break;
+
+            case "Fireball":
+                life -= 100;
+                
+                break;
         }
     }
+
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "obstacles":
+                
+                break;
+        }
+    }
+
+
 
 
 }

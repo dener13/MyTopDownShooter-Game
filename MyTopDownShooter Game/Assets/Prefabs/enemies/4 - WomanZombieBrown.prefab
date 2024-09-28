@@ -75,7 +75,6 @@ MonoBehaviour:
   rotationSpeed: 100
   possibleDrops:
   - {fileID: -2681497931575567278, guid: 20247cf36f8918643b0b6cdaa9d58f39, type: 3}
-  - {fileID: -8656536038138906302, guid: a2ba5f956754b384faf8fa3cce14d29d, type: 3}
   - {fileID: -8558389145386312387, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
 --- !u!114 &6313314995684802192
 MonoBehaviour:

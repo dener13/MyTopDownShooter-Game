@@ -7,6 +7,12 @@ public class Player : MonoBehaviour
 {
 
     private HealthController healthController;
+    public ManaSystem manaSystem;
+
+    public float specialManaCost = 100f;
+
+    public GameObject fireballPrefab;  // Prefab da fireball
+    public Transform firePoint;  // Ponto onde a fireball será spawnada
 
     [SerializeField]
     private float speed;
@@ -26,6 +32,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         healthController = FindObjectOfType<HealthController>();
+        manaSystem = FindObjectOfType<ManaSystem>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -35,6 +42,41 @@ public class Player : MonoBehaviour
         SetPlayerVelocity();
         RotateInDirectionOfInput();
         SetAnimation();
+
+      
+    }
+
+
+    private void Update()
+    {
+        if(manaSystem.currentMana >= 100)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                CastFireball();
+            }
+        }
+        else
+        {
+            
+        }
+        
+    }
+
+    // Método para lançar uma habilidade
+    void CastFireball()
+    {
+        if (manaSystem.SpendMana(specialManaCost))
+        {
+            // Instancia a fireball na posição do firePoint com a rotação atual
+            Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
+            Debug.Log("Fireball cast!");
+            manaSystem.currentMana -= 100;
+        }
+        else
+        {
+            Debug.Log("Not enough mana to cast Fireball!");
+        }
     }
 
     private void SetAnimation()
@@ -78,20 +120,14 @@ public class Player : MonoBehaviour
                 Destroy(other.gameObject);
                 break;
 
-            case "money":
-                MoneyManager.instance.AddMoney(10);
-                Destroy(other.gameObject);
-                break;
+            
 
             case "superpower":
-                Debug.Log("player pegou superpower");
+                manaSystem.RestoreMana(100);
                 Destroy(other.gameObject);
                 break;
 
-            case "colete":
-                Debug.Log("player pegou o colete");
-                Destroy(other.gameObject);
-                break;
+            
         }
     }
 }

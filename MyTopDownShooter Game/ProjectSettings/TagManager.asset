@@ -10,6 +10,8 @@ TagManager:
   - colete
   - money
   - superpower
+  - obstacles
+  - Fireball
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Obstacles
+  - Player
   - 
   - 
   - 
