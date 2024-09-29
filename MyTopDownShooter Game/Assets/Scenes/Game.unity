@@ -237,7 +237,7 @@ Transform:
   - {fileID: 1987623411}
   - {fileID: 1762429899}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &19375043
 GameObject:
@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6313314995684802193, guid: 051a57130be023f4a8ad7220f30b8e65, type: 3}
-  minimumSpawnTime: 30
-  maximumSpawnTime: 60
+  minimumSpawnTime: 15
+  maximumSpawnTime: 30
 --- !u!1 &34114872
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,8 +684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2862601044859685408, guid: 194b2fde65592d542b32de5303f842f6, type: 3}
-  minimumSpawnTime: 10
-  maximumSpawnTime: 30
+  minimumSpawnTime: 5
+  maximumSpawnTime: 20
 --- !u!1 &78955295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,8 +1460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1818227365058898301, guid: 155f982aefe708947806cb9ee1b82959, type: 3}
-  minimumSpawnTime: 25
-  maximumSpawnTime: 50
+  minimumSpawnTime: 30
+  maximumSpawnTime: 40
 --- !u!4 &218508484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6658752795855512395, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
@@ -1716,10 +1716,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 238370151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1b1486f62356c4cbdd4c1960dded04, type: 3}
+  m_Script: {fileID: 11500000, guid: 91e8f9ebf601c8546b503213a076d5e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 5930081620516040037, guid: 3192fa5b668e7f44c85923cf0223c9ae, type: 3}
+  enemyPrefab: {fileID: 5930081620516040037, guid: 3192fa5b668e7f44c85923cf0223c9ae, type: 3}
+  minimumSpawnTime: 60
+  maximumSpawnTime: 120
 --- !u!1 &240304117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,8 +2273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 541549910653932930, guid: 7328f352e4db02e4eb132ed87257134f, type: 3}
-  minimumSpawnTime: 15
-  maximumSpawnTime: 45
+  minimumSpawnTime: 10
+  maximumSpawnTime: 30
 --- !u!1 &333046286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,8 +2319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6313314995684802193, guid: 051a57130be023f4a8ad7220f30b8e65, type: 3}
-  minimumSpawnTime: 30
-  maximumSpawnTime: 60
+  minimumSpawnTime: 15
+  maximumSpawnTime: 30
 --- !u!1 &353955931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,9 +2389,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1655195215
+  m_SortingLayer: -1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: fd4178fe655ca234b9217c6d51cf817d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2754,11 +2756,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6658752795855512392, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: maximumSpawnTime
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6658752795855512392, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: minimumSpawnTime
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6658752795855512393, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: m_Name
@@ -3628,11 +3630,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6658752795855512392, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: maximumSpawnTime
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6658752795855512392, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: minimumSpawnTime
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6658752795855512393, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: m_Name
@@ -4117,7 +4119,7 @@ Transform:
   m_Children:
   - {fileID: 1608426369}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &607039361
 GameObject:
@@ -4262,7 +4264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &631736804
 Transform:
   m_ObjectHideFlags: 0
@@ -4279,7 +4281,7 @@ Transform:
   - {fileID: 1328374090}
   - {fileID: 1061208767}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &633999626
 GameObject:
@@ -4505,7 +4507,7 @@ Transform:
   m_Children:
   - {fileID: 1102302172}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &674335697
 GameObject:
@@ -4746,7 +4748,7 @@ Transform:
   m_Children:
   - {fileID: 238370152}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &737805320
 GameObject:
@@ -5820,8 +5822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2862601044859685408, guid: 194b2fde65592d542b32de5303f842f6, type: 3}
-  minimumSpawnTime: 10
-  maximumSpawnTime: 30
+  minimumSpawnTime: 5
+  maximumSpawnTime: 20
 --- !u!1 &909418956
 GameObject:
   m_ObjectHideFlags: 0
@@ -6100,7 +6102,7 @@ Transform:
   - {fileID: 714555604}
   - {fileID: 294241719}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954555982
 GameObject:
@@ -6140,11 +6142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578e0f0906bfe2b44ad13543376c6c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaSystem: {fileID: 0}
   specialManaCost: 0
   fireballPrefab: {fileID: 4077728905523403426, guid: 42f4005fd4bc7e045b0aeac9da20a718, type: 3}
   firePoint: {fileID: 650432083}
-  speed: 3
+  speed: 3.5
   bulletDamage: 10
   rotationSpeed: 720
 --- !u!50 &954555984
@@ -6611,9 +6612,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1655195215
+  m_SortingLayer: -1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: e6598e6ae82a3324e9ff949399248bf0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6707,63 +6708,6 @@ Transform:
   m_Father: {fileID: 1678624537}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &999703921
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3025284961932827742, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_Name
-      value: superpower (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679754040349706284, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
 --- !u!1 &1000185350
 GameObject:
   m_ObjectHideFlags: 0
@@ -6965,8 +6909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2862601044859685408, guid: 194b2fde65592d542b32de5303f842f6, type: 3}
-  minimumSpawnTime: 10
-  maximumSpawnTime: 30
+  minimumSpawnTime: 5
+  maximumSpawnTime: 20
 --- !u!1 &1029918736
 GameObject:
   m_ObjectHideFlags: 0
@@ -7332,8 +7276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1818227365058898301, guid: 155f982aefe708947806cb9ee1b82959, type: 3}
-  minimumSpawnTime: 25
-  maximumSpawnTime: 50
+  minimumSpawnTime: 30
+  maximumSpawnTime: 40
 --- !u!1 &1061208766
 GameObject:
   m_ObjectHideFlags: 0
@@ -7378,8 +7322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6313314995684802193, guid: 051a57130be023f4a8ad7220f30b8e65, type: 3}
-  minimumSpawnTime: 30
-  maximumSpawnTime: 60
+  minimumSpawnTime: 15
+  maximumSpawnTime: 30
 --- !u!1 &1081736402
 GameObject:
   m_ObjectHideFlags: 0
@@ -7425,7 +7369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6659519597451435725, guid: a8b8a0bccd008cd4fa1939bd431430cf, type: 3}
   minimumSpawnTime: 20
-  maximumSpawnTime: 40
+  maximumSpawnTime: 30
 --- !u!1 &1082858650
 GameObject:
   m_ObjectHideFlags: 0
@@ -7794,10 +7738,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1102302171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1b1486f62356c4cbdd4c1960dded04, type: 3}
+  m_Script: {fileID: 11500000, guid: 91e8f9ebf601c8546b503213a076d5e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 5817771828258595272, guid: 70c36881f36a96843a9bdee06411c7e1, type: 3}
+  enemyPrefab: {fileID: 5817771828258595272, guid: 70c36881f36a96843a9bdee06411c7e1, type: 3}
+  minimumSpawnTime: 60
+  maximumSpawnTime: 120
 --- !u!1 &1108329667
 GameObject:
   m_ObjectHideFlags: 0
@@ -8033,8 +7979,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2862601044859685408, guid: 194b2fde65592d542b32de5303f842f6, type: 3}
-  minimumSpawnTime: 10
-  maximumSpawnTime: 30
+  minimumSpawnTime: 5
+  maximumSpawnTime: 20
 --- !u!1 &1117368984
 GameObject:
   m_ObjectHideFlags: 0
@@ -8162,7 +8108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6659519597451435725, guid: a8b8a0bccd008cd4fa1939bd431430cf, type: 3}
   minimumSpawnTime: 20
-  maximumSpawnTime: 40
+  maximumSpawnTime: 30
 --- !u!1001 &1129421773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8172,11 +8118,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6658752795855512392, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: maximumSpawnTime
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6658752795855512392, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: minimumSpawnTime
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6658752795855512393, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: m_Name
@@ -8440,8 +8386,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5846148607150112329, guid: f1ff87e7d639d5f4d89aaec9484aaab9, type: 3}
-  minimumSpawnTime: 20
-  maximumSpawnTime: 40
+  minimumSpawnTime: 30
+  maximumSpawnTime: 45
 --- !u!1 &1161482604
 GameObject:
   m_ObjectHideFlags: 0
@@ -8814,8 +8760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 541549910653932930, guid: 7328f352e4db02e4eb132ed87257134f, type: 3}
-  minimumSpawnTime: 15
-  maximumSpawnTime: 45
+  minimumSpawnTime: 10
+  maximumSpawnTime: 30
 --- !u!1 &1192384396
 GameObject:
   m_ObjectHideFlags: 0
@@ -8831,7 +8777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1192384397
 Transform:
   m_ObjectHideFlags: 0
@@ -8848,7 +8794,7 @@ Transform:
   - {fileID: 218508484}
   - {fileID: 1417640020}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193132652
 GameObject:
@@ -9302,7 +9248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1240190598
 Transform:
   m_ObjectHideFlags: 0
@@ -9319,7 +9265,7 @@ Transform:
   - {fileID: 1700987470}
   - {fileID: 1972389188}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1257361081
 GameObject:
@@ -9448,7 +9394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6659519597451435725, guid: a8b8a0bccd008cd4fa1939bd431430cf, type: 3}
   minimumSpawnTime: 20
-  maximumSpawnTime: 40
+  maximumSpawnTime: 30
 --- !u!1 &1289692137
 GameObject:
   m_ObjectHideFlags: 0
@@ -9657,8 +9603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6313314995684802193, guid: 051a57130be023f4a8ad7220f30b8e65, type: 3}
-  minimumSpawnTime: 30
-  maximumSpawnTime: 60
+  minimumSpawnTime: 15
+  maximumSpawnTime: 30
 --- !u!1 &1334279299
 GameObject:
   m_ObjectHideFlags: 0
@@ -10131,7 +10077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -77, y: -75}
+  m_AnchoredPosition: {x: -198, y: -75}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1384213631
@@ -10204,7 +10150,7 @@ Transform:
   - {fileID: 483173362}
   - {fileID: 271401518}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1404031042
 GameObject:
@@ -10461,7 +10407,7 @@ GameObject:
   - component: {fileID: 1425939724}
   - component: {fileID: 1425939723}
   - component: {fileID: 1425939725}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: objects_outside_0004_Layer-5 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10723,6 +10669,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1472306147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1472306149}
+  - component: {fileID: 1472306148}
+  m_Layer: 0
+  m_Name: SpawnerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1472306148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472306147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a26552b8e42314ba3323b5b7746054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawners:
+  - {fileID: 1192384396}
+  - {fileID: 1595492862}
+  - {fileID: 1240190597}
+  - {fileID: 631736803}
+  - {fileID: 930367585}
+  - {fileID: 1614583584}
+  - {fileID: 2065578134}
+  - {fileID: 7322468}
+  - {fileID: 671120802}
+  - {fileID: 603282603}
+  - {fileID: 726071023}
+  activationThresholds: 0000000014000000320000005000000096000000c80000002c010000f401000050000000fa000000f4010000
+  deactivationThresholds: ffffff7fffffff7fffffff7fffffff7fffffff7fffffff7fffffff7fffffff7ffa000000f4010000ffffff7f
+--- !u!4 &1472306149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472306147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.606039, y: -0.7432789, z: -95.39679}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1487808732
 GameObject:
   m_ObjectHideFlags: 0
@@ -11033,7 +11036,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1655195215
   m_SortingLayer: -1
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ef4b96b3ee6d1c44e9b7a9cbbec9d619, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11299,7 +11302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1595492863
 Transform:
   m_ObjectHideFlags: 0
@@ -11316,7 +11319,7 @@ Transform:
   - {fileID: 70554679}
   - {fileID: 1114308894}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608426368
 GameObject:
@@ -11358,10 +11361,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1608426368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1b1486f62356c4cbdd4c1960dded04, type: 3}
+  m_Script: {fileID: 11500000, guid: 91e8f9ebf601c8546b503213a076d5e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 476244263585611238, guid: 338980d5c3f242840b2086292011fde7, type: 3}
+  enemyPrefab: {fileID: 476244263585611238, guid: 338980d5c3f242840b2086292011fde7, type: 3}
+  minimumSpawnTime: 60
+  maximumSpawnTime: 120
 --- !u!1 &1609715775
 GameObject:
   m_ObjectHideFlags: 0
@@ -11430,9 +11435,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1655195215
+  m_SortingLayer: -1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 9217b2f94b3833440a9cdda6a4d7ff4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11476,7 +11481,7 @@ Transform:
   - {fileID: 1123977544}
   - {fileID: 1834628598}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641474414
 GameObject:
@@ -11522,8 +11527,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5846148607150112329, guid: f1ff87e7d639d5f4d89aaec9484aaab9, type: 3}
-  minimumSpawnTime: 20
-  maximumSpawnTime: 40
+  minimumSpawnTime: 30
+  maximumSpawnTime: 45
 --- !u!1 &1664805544
 GameObject:
   m_ObjectHideFlags: 0
@@ -11671,7 +11676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score: 0'
+  m_text: 'Zombies Killed: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -11705,7 +11710,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -11764,7 +11769,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: -176, y: -50}
   m_SizeDelta: {x: 656.63, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1678624535
@@ -11896,8 +11901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 541549910653932930, guid: 7328f352e4db02e4eb132ed87257134f, type: 3}
-  minimumSpawnTime: 15
-  maximumSpawnTime: 45
+  minimumSpawnTime: 10
+  maximumSpawnTime: 30
 --- !u!1 &1708838478
 GameObject:
   m_ObjectHideFlags: 0
@@ -12216,8 +12221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1818227365058898301, guid: 155f982aefe708947806cb9ee1b82959, type: 3}
-  minimumSpawnTime: 25
-  maximumSpawnTime: 50
+  minimumSpawnTime: 30
+  maximumSpawnTime: 40
 --- !u!1 &1766900980
 GameObject:
   m_ObjectHideFlags: 0
@@ -12262,8 +12267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5846148607150112329, guid: f1ff87e7d639d5f4d89aaec9484aaab9, type: 3}
-  minimumSpawnTime: 20
-  maximumSpawnTime: 40
+  minimumSpawnTime: 30
+  maximumSpawnTime: 45
 --- !u!1 &1816293965
 GameObject:
   m_ObjectHideFlags: 0
@@ -12308,8 +12313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5846148607150112329, guid: f1ff87e7d639d5f4d89aaec9484aaab9, type: 3}
-  minimumSpawnTime: 20
-  maximumSpawnTime: 40
+  minimumSpawnTime: 30
+  maximumSpawnTime: 45
 --- !u!1 &1826045188
 GameObject:
   m_ObjectHideFlags: 0
@@ -12437,7 +12442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6659519597451435725, guid: a8b8a0bccd008cd4fa1939bd431430cf, type: 3}
   minimumSpawnTime: 20
-  maximumSpawnTime: 40
+  maximumSpawnTime: 30
 --- !u!1 &1849189991
 GameObject:
   m_ObjectHideFlags: 0
@@ -13487,8 +13492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 541549910653932930, guid: 7328f352e4db02e4eb132ed87257134f, type: 3}
-  minimumSpawnTime: 15
-  maximumSpawnTime: 45
+  minimumSpawnTime: 10
+  maximumSpawnTime: 30
 --- !u!1 &1981566554
 GameObject:
   m_ObjectHideFlags: 0
@@ -13615,8 +13620,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1818227365058898301, guid: 155f982aefe708947806cb9ee1b82959, type: 3}
-  minimumSpawnTime: 25
-  maximumSpawnTime: 50
+  minimumSpawnTime: 30
+  maximumSpawnTime: 40
 --- !u!1 &1994447753
 GameObject:
   m_ObjectHideFlags: 0
@@ -14004,7 +14009,7 @@ Transform:
   - {fileID: 1146223700}
   - {fileID: 1816293966}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084640499
 GameObject:
@@ -14507,11 +14512,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6658752795855512392, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: maximumSpawnTime
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6658752795855512392, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: minimumSpawnTime
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6658752795855512393, guid: 1aec80a48ed11ed4694a6d86ed494251, type: 3}
       propertyPath: m_Name

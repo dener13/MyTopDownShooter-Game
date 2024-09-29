@@ -6,6 +6,9 @@ public class EnemyMovement : MonoBehaviour
 {
     public static EnemyMovement instance;
 
+    private ManaSystem manaSystem;
+    private HealthController healthController;
+
     private Player player;
     private Fireball fireball;
 
@@ -31,6 +34,8 @@ public class EnemyMovement : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         fireball = FindObjectOfType<Fireball>();
+        manaSystem = FindObjectOfType<ManaSystem>();
+        healthController = FindObjectOfType<HealthController>();
 
         rb = GetComponent<Rigidbody2D>();
         playerAwarenessController = GetComponent<PlayerAwarenessController>();
@@ -75,6 +80,8 @@ public class EnemyMovement : MonoBehaviour
     {
         DropLoot();
         ScoreManager.instance.AddPoints(ScoreManager.instance.pointsForKill);
+        manaSystem.RestoreMana(3);
+        healthController.AddHealth(2);
         Destroy(this.gameObject);  // Destroi o inimigo
     }
 

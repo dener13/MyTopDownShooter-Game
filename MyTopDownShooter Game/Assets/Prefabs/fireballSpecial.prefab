@@ -118,9 +118,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -2.580109}
   serializedVersion: 2
-  m_Radius: 0.98
+  m_Radius: 3.0705903
 --- !u!1 &4077728904815442989
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 4077728904815442988}
   - component: {fileID: 4077728904815442990}
   - component: {fileID: 4077728904815442991}
-  - component: {fileID: 3192530814992715924}
   m_Layer: 0
   m_Name: explosion_0001 (10)
   m_TagString: Fireball
@@ -226,22 +225,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &3192530814992715924
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728904815442989}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98
 --- !u!1 &4077728905056924176
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +236,6 @@ GameObject:
   - component: {fileID: 4077728905056924179}
   - component: {fileID: 4077728905056924181}
   - component: {fileID: 4077728905056924178}
-  - component: {fileID: 5578668684099833271}
   m_Layer: 0
   m_Name: explosion_0001 (3)
   m_TagString: Fireball
@@ -347,22 +329,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &5578668684099833271
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728905056924176}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98
 --- !u!1 &4077728905409973861
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +340,6 @@ GameObject:
   - component: {fileID: 4077728905409973860}
   - component: {fileID: 4077728905409973862}
   - component: {fileID: 4077728905409973863}
-  - component: {fileID: 1360571515013541299}
   m_Layer: 0
   m_Name: explosion_0001 (1)
   m_TagString: Fireball
@@ -468,22 +433,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &1360571515013541299
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728905409973861}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98
 --- !u!1 &4077728905431641278
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +444,6 @@ GameObject:
   - component: {fileID: 4077728905431641265}
   - component: {fileID: 4077728905431641267}
   - component: {fileID: 4077728905431641264}
-  - component: {fileID: 166616935582452860}
   m_Layer: 0
   m_Name: explosion_0001 (4)
   m_TagString: Fireball
@@ -589,22 +537,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &166616935582452860
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728905431641278}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98
 --- !u!1 &4077728905523403426
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +605,6 @@ GameObject:
   - component: {fileID: 4077728905821294024}
   - component: {fileID: 4077728905821294026}
   - component: {fileID: 4077728905821294027}
-  - component: {fileID: 2461913416241075779}
   m_Layer: 0
   m_Name: explosion_0001 (2)
   m_TagString: Fireball
@@ -767,22 +698,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &2461913416241075779
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728905821294025}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98
 --- !u!1 &4077728906052295686
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +709,6 @@ GameObject:
   - component: {fileID: 4077728906052295929}
   - component: {fileID: 4077728906052295931}
   - component: {fileID: 4077728906052295928}
-  - component: {fileID: 5495914606593848701}
   m_Layer: 0
   m_Name: explosion_0001 (5)
   m_TagString: Fireball
@@ -888,22 +802,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &5495914606593848701
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728906052295686}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98
 --- !u!1 &4077728906167695215
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +813,6 @@ GameObject:
   - component: {fileID: 4077728906167695214}
   - component: {fileID: 4077728906167695200}
   - component: {fileID: 4077728906167695201}
-  - component: {fileID: 4282093385894465398}
   m_Layer: 0
   m_Name: explosion_0001 (13)
   m_TagString: Fireball
@@ -1009,22 +906,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &4282093385894465398
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728906167695215}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98
 --- !u!1 &4077728906170297026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +917,6 @@ GameObject:
   - component: {fileID: 4077728906170297029}
   - component: {fileID: 4077728906170297031}
   - component: {fileID: 4077728906170297028}
-  - component: {fileID: 1559155939825474648}
   m_Layer: 0
   m_Name: explosion_0001 (9)
   m_TagString: Fireball
@@ -1130,22 +1010,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &1559155939825474648
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728906170297026}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98
 --- !u!1 &4077728906204358303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1021,6 @@ GameObject:
   - component: {fileID: 4077728906204358302}
   - component: {fileID: 4077728906204358288}
   - component: {fileID: 4077728906204358289}
-  - component: {fileID: 3986725201139218744}
   m_Layer: 0
   m_Name: explosion_0001 (8)
   m_TagString: Fireball
@@ -1251,22 +1114,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &3986725201139218744
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728906204358303}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.1272949, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.0024639
 --- !u!1 &4077728906284053966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1125,6 @@ GameObject:
   - component: {fileID: 4077728906284053953}
   - component: {fileID: 4077728906284053955}
   - component: {fileID: 4077728906284053952}
-  - component: {fileID: 3230145574967207555}
   m_Layer: 0
   m_Name: explosion_0001 (6)
   m_TagString: Fireball
@@ -1372,22 +1218,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &3230145574967207555
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728906284053966}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98
 --- !u!1 &4077728906592572278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1229,6 @@ GameObject:
   - component: {fileID: 4077728906592572265}
   - component: {fileID: 4077728906592572267}
   - component: {fileID: 4077728906592572264}
-  - component: {fileID: 499607594920359148}
   m_Layer: 0
   m_Name: explosion_0001 (12)
   m_TagString: Fireball
@@ -1493,19 +1322,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &499607594920359148
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4077728906592572278}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.98

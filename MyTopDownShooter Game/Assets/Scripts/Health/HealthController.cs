@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class HealthController : MonoBehaviour
 {
     public static HealthController instance;
+    private ScoreManager scoreManager;
 
     [SerializeField]
     public float currentHealth;
@@ -27,6 +28,12 @@ public class HealthController : MonoBehaviour
     public UnityEvent OnDied;
     public UnityEvent OnDamaged;
     public UnityEvent OnHealthChanged;
+
+
+    private void Awake()
+    {
+        scoreManager = FindObjectOfType<ScoreManager>();
+    }
 
     public void TakeDamage(float damageAmount)
     {
@@ -53,6 +60,16 @@ public class HealthController : MonoBehaviour
         {
             OnDied.Invoke();
             StartCoroutine("TransitionToGameOver");
+
+            // Verifica se o jogador bateu o recorde
+            int highScore = PlayerPrefs.GetInt("HighScore", 0);  // Carrega o recorde salvo (0 se não houver)
+
+            if (scoreManager.score > highScore)
+            {
+                // Se a pontuação atual for maior, salva o novo recorde
+                PlayerPrefs.SetInt("HighScore", scoreManager.score);
+                Debug.Log("Novo recorde: " + scoreManager.score);
+            }
         }
         else
         {

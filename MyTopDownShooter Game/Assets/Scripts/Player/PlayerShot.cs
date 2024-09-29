@@ -22,7 +22,15 @@ public class PlayerShot : MonoBehaviour
     [SerializeField]
     private float timeBetweenShots;
 
-    
+    private Animator anim;
+
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+
     void Update()
     {
         if (fireContinuously || fireSingle)
@@ -43,6 +51,7 @@ public class PlayerShot : MonoBehaviour
 
     private void FireBullet()
     {
+        anim.SetTrigger("isShoot");
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 

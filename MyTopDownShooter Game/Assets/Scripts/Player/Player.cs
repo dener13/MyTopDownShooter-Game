@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
 
     private HealthController healthController;
-    public ManaSystem manaSystem;
+    private ManaSystem manaSystem;
 
     public float specialManaCost = 100f;
 
@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "life":
-                healthController.AddHealth(10);
+                healthController.AddHealth(25);
                 Destroy(other.gameObject);
                 break;
 

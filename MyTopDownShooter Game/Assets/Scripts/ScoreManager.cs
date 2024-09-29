@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public TextMeshProUGUI scoreText; // Campo opcional para exibir o score na tela
 
-    public int pointsForKill = 1;
+    public int pointsForKill;
 
     private void Awake()
     {
@@ -35,8 +35,11 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score;
+            scoreText.text = "Zombies Killed: " + score;
         }
     }
+
+
+  
 
 }
