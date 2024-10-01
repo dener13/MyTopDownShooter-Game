@@ -9,6 +9,8 @@ public class PlayerShot : MonoBehaviour
     [SerializeField]
     private GameObject bulletPrefab;
 
+    public AudioSource audioSource;  // Referência ao componente AudioSource
+
     [SerializeField]
     private float bulletSpeed;
 
@@ -52,6 +54,7 @@ public class PlayerShot : MonoBehaviour
     private void FireBullet()
     {
         anim.SetTrigger("isShoot");
+        audioSource.Play(); // Tocar o efeito sonoro do tiro
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
