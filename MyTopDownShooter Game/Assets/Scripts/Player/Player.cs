@@ -14,6 +14,11 @@ public class Player : MonoBehaviour
     public GameObject fireballPrefab;  // Prefab da fireball
     public Transform firePoint;  // Ponto onde a fireball será spawnada
 
+    public AudioSource specialAtkAudio;
+    public AudioSource superpowerAudio;
+    public AudioSource lifeAudio;
+    public AudioSource ohYeahAudio;
+
     [SerializeField]
     private float speed;
 
@@ -71,6 +76,8 @@ public class Player : MonoBehaviour
             // Instancia a fireball na posição do firePoint com a rotação atual
             Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
             Debug.Log("Fireball cast!");
+            specialAtkAudio.Play();
+            ohYeahAudio.Play();
             manaSystem.currentMana -= 100;
         }
         else
@@ -116,6 +123,7 @@ public class Player : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "life":
+                lifeAudio.Play();
                 healthController.AddHealth(25);
                 Destroy(other.gameObject);
                 break;
@@ -123,6 +131,7 @@ public class Player : MonoBehaviour
             
 
             case "superpower":
+                superpowerAudio.Play();
                 manaSystem.RestoreMana(100);
                 Destroy(other.gameObject);
                 break;
