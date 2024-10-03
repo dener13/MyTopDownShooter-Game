@@ -7,6 +7,7 @@ public class InvincibilityController : MonoBehaviour
     private HealthController healthController;
     public GameObject bloodFxPrefab;
     private SpriteRenderer playerSprite;
+    public AudioSource hurtAudio;
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class InvincibilityController : MonoBehaviour
         GameObject instanceBloodFx = Instantiate(bloodFxPrefab, transform.position, Quaternion.identity);
         Destroy(instanceBloodFx, 0.5f);
         playerSprite.color = Color.red;
+        hurtAudio.Play();
         healthController.IsInvincible = true;
         yield return new WaitForSeconds(invincibilityDuration);
         playerSprite.color = Color.white;

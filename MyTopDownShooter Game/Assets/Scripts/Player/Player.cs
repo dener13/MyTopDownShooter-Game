@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public AudioSource superpowerAudio;
     public AudioSource lifeAudio;
     public AudioSource ohYeahAudio;
+   
 
     [SerializeField]
     private float speed;

@@ -9,6 +9,9 @@ public class HealthController : MonoBehaviour
     public static HealthController instance;
     private ScoreManager scoreManager;
 
+
+    public AudioSource deadSound;
+
     [SerializeField]
     public float currentHealth;
 
@@ -37,6 +40,7 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
+        
         if(currentHealth == 0)
         {
             return;
@@ -59,6 +63,7 @@ public class HealthController : MonoBehaviour
         if(currentHealth == 0)
         {
             OnDied.Invoke();
+            deadSound.Play();
             StartCoroutine("TransitionToGameOver");
 
             // Verifica se o jogador bateu o recorde
@@ -74,6 +79,7 @@ public class HealthController : MonoBehaviour
         else
         {
             OnDamaged.Invoke();
+            
         }
     }
 
