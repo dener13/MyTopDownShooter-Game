@@ -180,6 +180,7 @@ MonoBehaviour:
   rotationSpeed: 100
   possibleDrops:
   - {fileID: -2681497931575567278, guid: 20247cf36f8918643b0b6cdaa9d58f39, type: 3}
+  - {fileID: -8558389145386312387, guid: 16f448f5368366a4a9dd912e43af1b77, type: 3}
 --- !u!114 &2862601044859685409
 MonoBehaviour:
   m_ObjectHideFlags: 0
